@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page - Relatório de Progresso</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            margin: 1rem;
+            background: var(--card-bg);
+            border: none;
+            border-radius: 6px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: var(--border-color);
+        }
+
+        .back-button i {
+            margin-right: 0.5rem;
+        }
+
+        .projeto {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .projeto-titulo {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .eventos-container {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Relatório de Progresso</h1>
+            <button id="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <p>Landing Page | Status: Em Andamento</p>
+    </header>
+
+    <main id="main-content">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Voltar para o Menu
+        </a>
+
+        <section class="projeto">
+            <h2 class="projeto-titulo">
+                <i class="fas fa-desktop"></i>
+                Landing Page
+            </h2>
+            
+            <div class="eventos-container">
+                <div class="evento">
+                    <time>17/10</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Reunião Inicial Landing Page</p>
+                        <p class="subtitulo">Discussão sobre estrutura.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+
+                <div class="evento">
+                    <time>08/11</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Perguntas Frequentes</p>
+                        <p class="subtitulo">Requerido Perguntas Frequentes "FAQ" para a LP.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+
+                <div class="evento">
+                    <time>11/12</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Planilha de Tolerâncias para Revisão</p>
+                        <p class="subtitulo">Planilha enviada.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+
+                <div class="evento">
+                    <time>11/12</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Acesso ao Site</p>
+                        <p class="subtitulo">Acesso enviado para a equipe.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+
+                <div class="evento">
+                    <time>16/12</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Problema com Login do CPANEL</p>
+                        <p class="subtitulo">Problema encontrado.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+
+                <div class="evento">
+                    <time>20/12</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Início da Implementação da Landing Page</p>
+                        <p class="subtitulo">Início após resolver acesso.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+
+                <div class="evento">
+                    <time>03/01</time>
+                    <div class="evento-texto">
+                        <p class="titulo">Alterações Solicitadas na Landing Page</p>
+                        <p class="subtitulo">Alterações realizadas.</p>
+                    </div>
+                    <i class="fas fa-check-circle icon"></i>
+                </div>
+            </div>
+        </section>
+
+        <div class="gallery-container">
+            <img src="https://picsum.photos/200/150?random=5" alt="Landing Page Image 1" class="gallery-item" onclick="openModal(this)">
+            <img src="https://picsum.photos/200/150?random=6" alt="Landing Page Image 2" class="gallery-item" onclick="openModal(this)">
+        </div>
+
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-content">
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="gallery.js"></script>
+</body>
+</html>

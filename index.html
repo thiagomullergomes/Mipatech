@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mipatech - Relatórios</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .lobby-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 2px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .service-card h3 {
+            margin: 1rem 0;
+            color: var(--text-color);
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .status.active {
+            background: var(--success-bg);
+            color: var(--success-text);
+        }
+
+        .status.pending {
+            background: var(--warning-bg);
+            color: var(--warning-text);
+        }
+
+        .welcome-message {
+            text-align: center;
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .welcome-message h2 {
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+
+        .welcome-message p {
+            color: var(--text-secondary);
+        }
+
+        .overview-section {
+            margin: 2rem auto;
+            max-width: 800px;
+            padding: 0 1rem;
+        }
+
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            border: 2px solid var(--border-color);
+            width: calc(33.33% - 1rem);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="centered-title">Mipatech - Central de Relatórios</h1>
+            <button id="theme-toggle" aria-label="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <p>Acompanhamento de Projetos e Atividades</p>
+    </header>
+
+    <main>
+        <div class="welcome-message">
+            <h2>Bem-vindo à Central de Relatórios</h2>
+            <p>Selecione um dos serviços abaixo para visualizar seu relatório detalhado de progresso e atividades.</p>
+        </div>
+
+        <div class="overview-section">
+            <h3>Visão Geral das Atividades</h3>
+            <div class="progress-stats">
+                <div class="stat-card">
+                    <div class="stat-number">62</div>
+                    <div class="stat-label">Total de Atividades</div>
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">58</div>
+                    <div class="stat-label">Atividades Concluídas</div>
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Atividades em Andamento</div>
+                    <i class="fas fa-clock"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="lobby-container">
+            <a href="google-business.html" class="service-card">
+                <i class="fas fa-building"></i>
+                <h3>Google Business Profile</h3>
+                <p>Gestão e otimização da presença no Google Meu Negócio</p>
+                <span class="status active">
+                    <i class="fas fa-check-circle"></i>
+                    Concluído
+                </span>
+            </a>
+
+            <a href="linkedin.html" class="service-card">
+                <i class="fab fa-linkedin"></i>
+                <h3>LinkedIn Marketing</h3>
+                <p>Estratégia e gestão de conteúdo no LinkedIn</p>
+                <span class="status pending">
+                    <i class="fas fa-clock"></i>
+                    Em Andamento
+                </span>
+            </a>
+
+            <a href="landing-page.html" class="service-card">
+                <i class="fas fa-desktop"></i>
+                <h3>Landing Page</h3>
+                <p>Desenvolvimento e otimização da página de conversão</p>
+                <span class="status active">
+                    <i class="fas fa-check-circle"></i>
+                    Concluído
+                </span>
+            </a>
+
+            <a href="social-media.html" class="service-card">
+                <i class="fab fa-instagram"></i>
+                <h3>Social Media</h3>
+                <p>Gestão de redes sociais e criação de conteúdo</p>
+                <span class="status pending">
+                    <i class="fas fa-clock"></i>
+                    Em Andamento
+                </span>
+            </a>
+
+            <a href="traffic.html" class="service-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Tráfego Pago</h3>
+                <p>Gestão de campanhas de mídia paga</p>
+                <span class="status pending">
+                    <i class="fas fa-clock"></i>
+                    Em Andamento
+                </span>
+            </a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
